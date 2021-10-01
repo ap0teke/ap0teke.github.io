@@ -90,11 +90,11 @@ body {
   }
 
 @keyframes shadow {
-    0½ {
+    0% {
         box-shadow: -71px -2px 510px 200px rgba(255,136,136,1);
     }
 
-    25½ {
+    25% {
         box-shadow: -81px -2px 610px 200px rgba(155,136,136,1);;
     }
 
@@ -165,6 +165,10 @@ body {
       
     }
 
+    #selected {
+        height: 100vh;
+        overflow-y: scroll;
+    }
     #cutup p {
         opacity: 1;
     }
