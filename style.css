@@ -89,6 +89,11 @@ body {
     
   }
 
+  .pdf {
+    width: 95%;
+    height:70vh !important;
+  }
+
 @keyframes shadow {
     0% {
         box-shadow: -71px -2px 510px 200px rgba(255,136,136,1);
@@ -172,14 +177,21 @@ body {
     #cutup p {
         opacity: 1;
     }
- #contact-card {
+    #contact-card {
         width: 80vw !important;
+    }
+    .pdf {
+        display: none;
     }
 }
 
 @media only screen and (min-width: 601px) {
     #main-img {
     width: 100%;
+    }
+
+    .pdf-link {
+        display:none;
     }
 }
 
