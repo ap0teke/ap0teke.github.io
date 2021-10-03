@@ -11,6 +11,18 @@ body {
 #main {
     max-width: 100%;
     overflow: hidden;
+    height: 100vh !important;
+}
+#navbar {
+    background-color: #FBFBF2 !important;
+    z-index: 5;
+}
+
+#navbarham {
+    height: max-content !important; 
+    overflow: hidden; 
+    background-color: #FBFBF2 !important; 
+    z-index: 3;
 }
 
 #navbar a:hover {
@@ -32,14 +44,20 @@ body {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-delay: 1500ms;
+    z-index: 0;
 }
 
 #hide {
     margin-right: 16px;
 }
 
+#about-box {
+    z-index: 1;
+}
+
 #about-me {
     background-color:gray;
+    z-index: 0 !important;
     /*
     box-shadow: 3px 2px 120px 20px rgb(255 136 136);
     animation: shadow-1 15s 1500ms infinite;
