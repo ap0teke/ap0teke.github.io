@@ -87,6 +87,9 @@ body {
     letter-spacing: 3px;
 }
 
+.overline {
+    text-decoration: line-through;
+}
 .logo {
     height: 36px;
     width: auto;
