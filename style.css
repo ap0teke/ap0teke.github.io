@@ -3,11 +3,7 @@ body {
     background-color: #fbfbf2;
 }
 
-/*#navbar {display: flex; 
-    flex-direction: row; 
-    justify-content: flex-end;
-    }
-*/
+
 #main {
     max-width: 100%;
     overflow: hidden;
