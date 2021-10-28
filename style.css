@@ -80,7 +80,7 @@ body {
     opacity: 0.5;
 }
 #cutup p:hover {
-    opacity: 1;
+    opacity: 0.99;
 }
 
 #show:hover {
