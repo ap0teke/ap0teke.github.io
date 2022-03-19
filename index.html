@@ -1,206 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>ap0teke</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="./w3.css">
-<script src="https://www.w3schools.com/lib/w3.js"></script>
-<!--text animation by github/faebeee/write-and-delete -->
-<script src="./basic.js"></script>
-<script src="./dist/webcomponent.js" defer></script>
-<body class="w3-content" style="max-width:100%">
-
-
-
-<div id="navbar" class="w3-bar w3-top w3-white w3-display-container" >
-    <div class="w3-bar-item w3-row w3-col w3-monospace w3-wide" id="page-title" style="width:220px;">
-        <a href="https://ap0teke.github.io" style="text-decoration: none !important;"><div class="w3-col" id="name" style="width: 150px;">
-            <h4><write-and-delete id="namein" class="w3-right"  timeout="300" loop="true" speed="100" errorQuota="0.3" errorCharacterMap="a,e,o,ö,æ,z,y,q,m,d,0,1,2,3,4,5,6,7,8,9" cursor="_">alparslan, apo, ap0</write-and-delete></h4></div>
-            <div class="w3-rest"><h4>
-              teke
-          </h4></a>
-        
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/starter.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="assets/p5js/p5.js"></script>
+    <script src="assets/js/sketch.js"></script>
+    <title>ap0teke</title>
+  </head>
+  <body>
+    
+    <div class="h-100 col-md-8  py-5 px-3 mx-auto bg-light content container">
+      <div class="accordion" id="accordionExample">
+        <div><h1 class="display-3 text-center">ap0teke</h1>
+          
         </div>
-    </div>
-    <div class="w3-padding-16 w3-hide-small">
-        <a href="#contact" class="w3-bar-item w3-button w3-right w3-round-xxlarge">contact</a>
-        <a href="#selected-works" class="w3-bar-item w3-button w3-right w3-round-xxlarge ">selected works</a>
-        <a href="#" class="w3-bar-item w3-button w3-right w3-round-xxlarge">main</a>
-    </div>  
-    
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-padding-16 w3-hide-large w3-hide-medium" onclick="collapseNavbar()">&#9776;</a>
-  
-  </div>
-  
-  <div id="navbarham" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-padding-top-64 w3-display-container">
-    <a href="#" class="w3-bar-item w3-button w3-right w3-round-xxlarge ">main</a>
-    <a href="#selected-works" class="w3-bar-item w3-button w3-right w3-round-xxlarge ">selected works</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-right w3-round-xxlarge">contact</a>
-    
-    
-  </div>
+         
 
+      <hr class="my-5">
 
+      
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            
+              <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h2 class="mb-0 text-dark"><small>bio</small></h2>
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#collapseOne">
+            <div class="card-body mx-4 py-5">
+              <p class="tall-text"> 
+                
+                <span class="h1" style="overflow-x:auto;">alparslan /*ap0*/ teke</span><br><br>
+                <span class="h2">is an ex-engineer-to-be, current sociologist, and future designer/artist.</span><br><br>
+                has attended mechanical engineering and sociology schools. holds a bachelor's in the latter.<br>
+                performs solo and collaborative noise acts.<br> 
+                draws and animates with code using algorithms.<br>
+                engages with text at several frontiers.
 
-<!-- Start Content -->
-
-<div id="main">
-    <div class="w3-display-container w3-green" id="background-cells" style="height: 100vh !important; position: relative;"></div>
-    <div id="about-box" class = "w3-display-right" > 
-        <button id="show" class=" w3-button w3-text-white w3-round-xxlarge w3-pink" onclick="w3.show('#about-me'), w3.hide('#show')">about me</button>
-        <div id="about-me" class="w3-card-4 w3-cell w3-cell-middle w3-display-bottomright w3-padding-64 w3-animate-right w3-animate-opacity w3-border w3-round-xxlarge" style="display: none;"> 
-            <p class="w3-padding-large w3-opacity-off w3-white w3-round-large"  style="width: 50vw;">alparslan/apo/ap0-teke is a double renegade who converted from engineering to sociology, and from there to arts and design. I make noise. I design and code. I do translations. Currently, I immersed myself in web design and development.<br><br>I performed in many cities in Turkey, as well as in Germany and Netherlands, mostly as an organic part of <a href="https://artisdead.in" target="_blank">Art is Dead</a> initiative, where my participation included logistics volunteering and co-organizing as well. I collaborate with artists from different backgrounds.<br><br> I am always open to collaborations, partnerships, or projects. Just hit me up via one of the <a href="#contact">contact channels</a> below. <br><br> You can find my resume <a href="./CV.pdf" target="_blank">here</a>.
-            </p>
-            <button id="hide" class="w3-button w3-text-white w3-round-xxlarge w3-pink w3-right w3-opacity-off" onclick="w3.hide('#about-me'), w3.show('#show')">
-                hide           
-        </button></div>
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            
+              <button class="btn btn-link btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <h2 class="mb-0 display-5 text-dark">code</h2>
+              </button>
+            
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#collapseFive">
+            <div class="card-body mx-4 py-3">
+              <p>ap0’ draws and animates with code using algorithms in processing(java) and p5(javascript). <br> 
+                
+              <br>         
+              </p>
+              <h4 class="text-center">_algorithmic art_</h4>
+              <br>
+              
+               
+                <div class="card-group row">
+                  <div class="card col-sm-4">
+                    <img class="card-img-top img-fluid img-thumbnail thumbnails" src="./media/img/smooth-rotation.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Smooth Rotation <a href="https://editor.p5js.org/ap0teke/sketches/tW5hWhrRm" target="_blank">&#62;code&#60;</a></h5>
+                      <p class="card-text">exploring textures and folds with trigonometric expressions on the cells of a grid.</p>
+                      <p class="card-text"><small class="text-muted">animation</small></p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-4">
+                    <img class="card-img-top img-thumbnail thumbnails" src="./media/img/iron-dust.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Iron Dust <a href="https://editor.p5js.org/ap0teke/sketches/GrYAU1W11" target="_blank">&#62;code&#60;</a> </h5>
+                      <p class="card-text">another stop on trigonometric juggling.</p>
+                      <p class="card-text"><small class="text-muted">animation</small></p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-4">
+                    <img class="card-img-top img-thumbnail thumbnails" src="./media/img/double-reversible.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Double Reversible <a href="./media/double-reversible.mp4" target="_blank">&#62;video&#60;</a></h5>
+                      <p class="card-text">deliberately messing up with degrees and radians can yield interesting outcomes!</p>
+                      <p class="card-text"><small class="text-muted">animation</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-group row">
+                  <div class="card col-sm-4">
+                    <img class="card-img-top img-fluid img-thumbnail thumbnails" src="./media/img/nazar-bes.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Nazar <a href="https://editor.p5js.org/ap0teke/sketches/WNQWTOuqD" target="">&#62;code&#60;</a></small></p></h5>
+                      <p class="card-text">Code as a gift; this is an algorithmic nazar drawing for my fellow, bes.<br>
+                        
+                      <p class="card-text"><small class="text-muted">animation</small></p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-4">
+                    <img class="card-img-top img-thumbnail thumbnails" src="./media/img/untitled1.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">untitled</h5>
+                      <p class="card-text">practice in <code>arrays, rotate and translate.</code></p>
+                      <p class="card-text"><small class="text-muted">image</small></p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-4">
+                    <img class="card-img-top img-thumbnail thumbnails" src="./media/img/two-persons-many-squares.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Two Persons Many Squares</h5>
+                      <p class="card-text">babysteps in working with live image.</p>
+                      <p class="card-text"><small class="text-muted">image</small></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-sm-4"></div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4"></div>
+                </div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <br><br><br>
+                <h4 class="text-center">_web design_</h4>
+                <br>
+                <p>ap0' is familiar with web design tools such as bootstrap and wordpress.<br>
+                <small>don't hesitate to get in touch if you'd need help with your portfolio page or small-scale web applications.</small></p>
+                 
+                  <div class="card-group row">
+                    <div class="card col-sm-4">
+                      <img class="card-img-top img-fluid img-thumbnail thumbnails" src="./media/img/korayergunay.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://korayergunay.com" target="_blank">korayergunay.com</a></h5>
+                        <p class="card-text">design & deployment.</p>
+                        <p class="card-text"><small class="text-muted">html/css/javascript</small></p>
+                      </div>
+                    </div>
+                    <div class="card col-sm-4">
+                      <img class="card-img-top img-thumbnail thumbnails" src="./media/img/sifayollari.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="https://sifayollari.com" target="_blank">sifayollari.com</a> </h5>
+                        <p class="card-text">design & deployment</p>
+                        <p class="card-text"><small class="text-muted">wordpress/css</small></p>
+                      </div>
+                    </div>
+                    <div class="card col-sm-4">
+                      <img class="card-img-top img-thumbnail thumbnails" src="./media/img/kenz.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">kenz</h5>
+                        <p class="card-text">unpublished</p>
+                        <p class="card-text"><small class="text-muted">wordpress/css</small></p>
+                      </div>
+                    </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            
+              <button class="btn btn-link btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h2 class="mb-0 display-5 text-dark">music</h2>
+              </button>
+            
+          </div>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#collapseTwo">
+            <div class="card-body mx-4 py-3">
+              <div class="text-center container">
+                <img src="./media/img/setup2.jpg" class="py-3" style="max-width: 80%; height: auto;">
+              </div>
+              <p class="tall-text">
+                <h4 class="text-center">_intro_</h4>
+                ap0teke performs solo and collaborative noise acts.<br><br>  their primary instruments are a laptop and a no-input mixing console, most of the time accompanied by junk material and heavy electronics.<br><br>  believing in the progressive potentials of joining practice and theory, they aim to spark and engage in theoretical debates around the aesthetic-political implications of noise, music, collectivity, and technology.<br><br>  the ground on which such endeavors are made possible is to a large extent the <a href="https://artisdead.in" target="_blank">A.I.D</a> initiative, where ap0’ has done their apprenticeship.</p>
+                <br><br>
+                <h4 class="text-center">_performances_</h4>
+                <br>
+                 <p>23-08-17 MultiRAID2: Cruising on Limits w/ Isabel Morti (İzmir) <a href="https://www.youtube.com/watch?v=nYXl0kbB54k" target="_blank">&#62;video&#60;</a><br>
+                    06-01-18 A.I.D Ankara#1 (Ankara)<br>
+                    10-11-18 A.I.D Ankara#3 w/Cihan Gülmez, F.Can Mekikoğlu, Tess Waggoner (Ankara)<a href="https://soundcloud.com/apo-teke/sahap-dortlusu" target="_blank">&#62;live recording&#60;</a><br>
+                    4-08-18 Art Is Dead? Day#2 w/k.l.s.s. (İstanbul)<br>
+                    01-09-18 Volksamt! Hata Yapın Lansman Partisi (İstanbul)<br>
+                    2-03-19 A.I.D Room #12 as part of Earaction (İstanbul)<br>
+                    22-03-19 A.I.Dzone (Ankara)<br>
+                    19-04-19 A.I.D Den Haag #1 as part of G/A/G (Den Haag) <a href="https://www.youtube.com/watch?v=0qadMXYsGCo" target="_blank">&#62;video&#60;</a><br>
+                    23-06-19 Multiversal X A.I.D (Berlin)<br>
+                    24-08-19 Badire Radyo Açılış Etkinliği w/F.Can Mekikoğlu, Tess Waggoner (Ankara)<br>
+                    25-08-19 Volksfest! II w/Tan Babür (İstanbul)<br>
+                    17-05-20 Splash Scene w/Nev Ne as K-Makine (online) <a href="https://www.facebook.com/nevnenevne/posts/10158200026527412" target="_blank">&#62;video&#60;</a><br>
+                    12-06-20 Club CoWed w/Nev Ne as K-Makine (online)</p>
+                  </p>
+              <br>
+              <h4 class="text-center">_selected recordings_</h4>
+              <br>
+              <div class="card-body">
+                <div class="card">
+                  <div class="card-img-top">
+                    <iframe loading="lazy" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/382703516&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                  </div>
+                  <br>
+                  <div class="card-text"><p>an exploration in granular techniques with samples from no-input mixing sessions, field recordings, classical music, and The Conet Project. </p></div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="card-body">
+                <div class="card">
+                  <div class="card-img-top">
+                    <iframe loading="lazy" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/674461586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                  </div>
+                  <br>
+                  <div class="card-text"><p>a rather violent composition made of analog no-input mixing and modular synthesis in
+                    PureData’s Automatonism. 
+                    <br>
+                    <br>
+                    the piece culminates in a sonic storm that creates an immersive binaural experience.</p></div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="card-body">
+                <div class="card">
+                  <div class="card-img-top">
+                    <iframe loading="lazy" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/566481624&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                  </div>
+                  <br>
+                  <div class="card-text"><p>excerpt from a glitch that plays to eternity, found while circuit-bending a keyboard.<br><br> can it be called a ready-made? <br>or, would the uninformed ear mistake it for a human-made composition?</p></div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="card-body">
+                <div class="card">
+                  <div class="card-img-top">
+                    <iframe loading="lazy" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/817368694&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                  </div>
+                  <br>
+                  <div class="card-text"><p>a composition with digitally synthesized sounds accompanying an excerpt from the
+                    Xenofeminist Manifesto. 
+                    <br>
+                    <br>
+                    an effort to zoom out from sonic & procedural qualities of musical work
+                    to incorporate other fields and convey messages more directly.</p></div>
+                </div>
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            
+              <button class="btn btn-link btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h2 class="mb-0 display-5 text-dark">text</h2>
+              </button>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#collapseFour">
+            <div class="card-body">
+              <p class="tall-text">ap0' is engaged with text at several frontiers, including academic work, translation, cut-ups, and editing. 
+                <br>below are some works authored/translated/edited so far;
+                <br>
+                <br>
+              <div class="row">
+                <div class="col-sm-3"><h6 class="text-muted">article</h6></div>
+                <div class="col-sm-9"><p><u>Electronic musical device artisanship.</u>
+                  <br><small class="text-muted">interviews, digital ethnography.<br>
+                    2200 words. sociology of work.<br>
+                  link will be added.</small>
+                </p></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"><h6 class="text-muted">article</h6></div>
+                <div class="col-sm-9"><p><u>Achievements and limitations of major transnational
+                  action in response to global e-waste crisis.</u>
+                  <br><small class="text-muted">literature research, postcolonial critique.<br>
+                    4000 words. environmental sociology.<br>
+                    <a href="./media/e-waste-crisis.pdf" target="_blank">&#62;link&#60;</a></small>
+                </p></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"><h6 class="text-muted">translation</h6></div>
+                <div class="col-sm-9"><p><u>Gürültüyle Dolu: Teori ve Japon Gürültü Müziği</u>
+                  <br><small class="text-muted">original title:
+                    Full with noise: Theory and Japanese noise music. <br>auth. Paul Hegarty. english→turkish.<br>
+                    5800 words. AIDzine#8.<br>
+                    <a href="./media/gurultuyle-dolu.pdf" target="_blank">&#62;link&#60;</a></small>
+                </p></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"><h6 class="text-muted">editing</h6></div>
+                <div class="col-sm-9"><p><u>A.I.D Zine #8, #9, #10</u>
+                  <br><small class="text-muted"><a href="https://artisdead.in" target="_blank">artisdead.in</a><br>
+                    <a href="https://artisdead.in/zine" target="_blank">&#62;link&#60;</a><br></small>
+                </p></div>
+              </div>
+              </p>
+            </div>
+          </div>
+        </div>
         
-    </div>
-</div>
-<!--<div id="home" class="w3-content w3-padding-top-48">
-<img class="w3-animate-top" src="img/welcome.jpg" alt="ap0teke" style="width:100%">
-</div>-->
-<div id="selected" class="w3-display-container" style="background-color: #FBFBF2;">
-  <div id="selected-works" class="w3-baby w3-container w3-padding-top-24" style="height: 100vh;">
-  <div class="w3-bar w3-row w3-platin">
-    <button class="w3-bar-item w3-button tablink w3-third tabs-button" onclick="worksTab(event,'noise')"><h4>noise/music</h4></button>
-    <button class="w3-bar-item w3-button tablink tabs-button w3-third" onclick="worksTab(event,'cutup')"><h4 >cut-up</h4></button>
-    <button class="w3-bar-item w3-button tablink tabs-button w3-third" onclick="worksTab(event,'translation')" ><h4>translation</h4></button>
-  </div>
-  
-  <div id="noise" class="w3-container w3-border tab">
-    
-    <div class="w3-padding-64 w3-row-padding">
-      <div class="w3-col w3-platin w3-center w3-padding-32 m6 l4">
-        <h5 class="w3-padding-16">apoteke - solo noise project</h5>
-        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/674461586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/apo-teke" title="apoteke" target="_blank" style="color: #cccccc; text-decoration: none;">apoteke</a> · <a href="https://soundcloud.com/apo-teke/extra-virgin" title="Extra Virgin" target="_blank" style="color: #cccccc; text-decoration: none;">Extra Virgin</a></div>
-        <p>no-input mixer, puredata/automatonism.</p>
-      </div>
-      <div class="w3-col w3-baby w3-center w3-padding-32 m6 l4">
-        <h5 class="w3-padding-16">in collaboration with bes</h5>
-        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/779814928&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/apo-teke" title="apoteke" target="_blank" style="color: #cccccc; text-decoration: none;">apoteke</a> · <a href="https://soundcloud.com/apo-teke/ruzgarda-karahindiba-apotekebes" title="Rüzgârda Karahindiba - apoteke&amp;bes" target="_blank" style="color: #cccccc; text-decoration: none;">Rüzgârda Karahindiba - apoteke&amp;bes</a></div>
-        <p>no-input mixer, electronics, pc.</p>
-      </div>
-      <div class="w3-col w3-timber w3-center w3-padding-32 m6 l4">
-        <h5 class="w3-padding-16">as part of fireball quartet</h5>
-        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/643349031&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/apo-teke" title="apoteke" target="_blank" style="color: #cccccc; text-decoration: none;">apoteke</a> · <a href="https://soundcloud.com/apo-teke/sahap-dortlusu" title="şahap dörtlüsü" target="_blank" style="color: #cccccc; text-decoration: none;">şahap dörtlüsü</a></div>
-        <p>no-input-mixer, electronics.</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="cutup" class="w3-container w3-border tab" style="display:none">
-    <div class="w3-padding-64 w3-row-padding">
-      <div id="cutup1" class="w3-col w3-platin w3-center w3-padding-32 m6 l4">
-      <h3>zaman</h3>
-      <p  class="w3-container w3-padding-large">Ve bütün lanetlenmiş ruhlar gibi, içinde akıl yürütme yetisine sahip ahlak kuralları, Hoboken'e gittiğimizde canlı bir şekilde dile getirilen bir hayalet filmiydi.<br>
-        Einst war der Geist Gott, dann wurde er zum Menschen und jetzt wird er gar noch Pöbel.<br>
-        Emek aracı işçiyi yere serer. Tersine bir prens daima "şiir"den daha değerlidir, varolan yapıların yeni bir kullanımıdırlar. Onlar bu dünya için, bunlar ahiret ve kıyamet günü için! Kapitalistle ücretli işçi arasındaki mücadele, göbek çizgisi boyunca akıyor. Kilise diyorlar tatlı kokulu mağaralarına. Ne var ki bizim burada üzerinde durduğumuz, adım adım işaretlenmiş tek ve aynı tarihtir. Takip altında limana sığınırken suların alçalması yüzünden gecikebilip, içer ve amfetamin alırdı. Ardından senden faydalanır. Keza, devlet otoritesi altında parça-iş olarak birbirinden bağımsızlaşan gözleri kızın vücudunda gezindi. Ancak aşka mıhlanacak kadar güçlü olan kişi aşık olabilirdi.<br>
-        Deyip keselim:<br>
-        İyi niyetli ikiyüzlülük - onlara görece büyük bir sanayi içinde Bilgi Ağacı'nın meyvelerini bağımsız devreler arasında kümelenmiş bir evrimin dolambaçlı sevgi ve duygudaşlık elbisesi biçiminde düşünselleştirilmesinin göstergesidir.
-        </p>
-      </div>
-      <div id="cutup2" class="w3-col w3-baby w3-center w3-padding-32 m6 l4">
-        <h3>çürüme</h3>
-        <p class="w3-container w3-padding-large">Herkes, düpedüz sarılan bitkilerle sülükler, daha sonra "Queer ve "Yage"; gerçek daima aynı yere döner. Suç, devletsiz bir toplumun ve egoistler birliğine ulaşmanın araçlarından biridir.<br>
-          Arap, beni görür görmez biraz doğruldu, o yaz daha önceki aylarda kızıyla çok vakit geçirmiştim; Güney Amerika'da çabucak doğallaşmasına bakarak, onun birkaç yılda bütün kıtayı kaplayabileceğine kesinlikle inanabilirdik. Düşünceye Özerk sonluklar sunan bu imgelerin sayımının ben olduğumu anlamak için, gayret sarf etmem gerekti.<br>
-          <br>
-          Gece, iptal edilmiş bir uyku, her gece.<br>
-          <br>
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            
+              <button class="btn btn-link btn-block text-center collapsed" type="button" >
+                <h2 class="mb-0"><small><a class="text-dark nounderline" href="./media/ap0teke-resume.pdf" target="_blank">resume</a></small></h2>
+              </button>
+            
+          </div>
           
-          "Senin adına buna pek üzüldüm..." dedi.<br>
-          Yıllar geçti.<br>
-          Üzerime kapandı oda, umduğum varlığıydı.<br>
-          Ceza artık bir suçun karşılığı değil.<br>
-          </p>
-        
+        </div>
       </div>
-      <div id="cutup3" class="w3-col w3-timber w3-center w3-padding-32 m6 l4">
-        <h3>gürültü</h3>
-        <p class="w3-container w3-padding-large">
-          “Ses, doğanın kelime dağarcığıdır.”[1]<br>
-
-          “Antik yaşam tamamen sessizdi.”[2]<br>
-          
-          “Kelime, baylar, birincil derecede kamu sorunudur.”[3] “’Gösterilen’e gönderme yapan dilin     kelimelerinden farklı olarak, müzikte asla lisan tarzı bir şifre istikrarlı olarak esas alınmaz. Burada söz konusu olan [Levi-Strauss’un düşündüğünün aksine] ‘kelimeler yerine sesler halinde kodlanmış bir masal’ değil, daha ziyade ‘anlamı çıkarılmış bir lisan’dır.”[4] “Belirli bir sesi anlam çerçevesinde değerlendirince, sesin artık ses olarak duyulmadığı, vurgunun kendi başına sesten, belirlenmiş sabit bir anlama kaydığı söylenebilir. ABSENTMINDED dinleme ise bunun tersidir: ses aracılığıyla anlamlar keşfetmeyi ya da sesin kuruluşunda önceden belirlenmiş bir şeyler aramayı durdurmak için beynimizdeki ses sınıflandırma-tanımlama yazılımının engellenmesi yahut kontrol edilmesi.”[5] <br>
-          <br>
-          “Kapitalizm gerçek olmayan, aldatmaca bir gerçeklik olan ‘imgeler’in (yani temsiller, akli konseptler) üreticisidir ve bunlar yalnızca sahte gerçekliğin yararına çalışırlar –gösteri. Gösteri yaşamın, yaşamın sosyal ilişkilerinden (sosyal sınıf sistemini de muhafaza eder) ayrılmasının, bizim ihtisas dediğimiz bireysel hücrelere ayrılmış hayali bir dünyanın yaratımının sorumlusudur: felsefe, din, sanat, bilim vs.”[6] “Egemen ekonomik sistem, gösterinin yaratıcı özgürlüğümüze yönelik tehditlerine direnmek için birtakım yollar geliştirilmelidir. Sanat elle tutulamaz, fildişi kulesinden inmeli, kişinin bireyselliğinin yabancı bir sosyal çevre tarafından değil, sosyal ilişkilerin kişinin bireyselliğine dayalı olarak keşfedildiği komünal bir deneyim olmalıdır.<br>
-          <br>
-          Bu, doğaçlama bir ortamda başarılabilecek bir şeydir. Serbest doğaçlamada vuku bulan şey insanlar arasında direkt yaratıcı (bu yüzden mümkün olduğunca daha özgür) bir ilişkidir. “Oyuncu(lar)” ve “kitle” arasındaki ayrım bulanıklaştırılmalıdır zira ikisi de aynı çevreyi paylaşırlarken ilişkileri simbiyotik bir hal alır. Bu, bunun iyi bir deneyim olacağı anlamına gelmez, yalnızca spesifik bir zaman ve mekanda, bir çevrede, bir durumda, bir şeyler olur.”[7]<br>
-          <br>
-          “Serbest doğaçlama direkt olarak gürültü ile ilişkilidir, zira kişinin tarzları sınırlayan önceden belirlenmiş resmi geleneklerden özgürleşmesi anlamına gelir, ve serbest doğaçlama kişinin spesifik bir uzay zamanda çevresine verdiği çıktıya olan ilişkisi dışında bilinçli olarak tarza teslimiyettir. <br>
-          <br>
-          Pornografi seksin bilinçsizlik halidir. Gürültü müziğin bilinçsizliğidir.”[8] “Gürültü müzik anlam yoksunluğu, yalnızca vahşi bir ifadedir. Bu yüzden gürültü müzik gösteriyi gerçek hayata indirmesi anlamında gerçekliğin bir yansımasını temsil eder. Yaşamın gerçek olmasını engelleyen gürültüyü, sahte olan alternatif gerçekliği yansıtır. Direkt olarak imgeler piyesine müdahale eder ve kendini vahşet, düzensizlik, saçmalık, özgürlük olarak sunar. Sosyal bir anlaşmadan özgürleştiğindeki insanın halidir; benlikten tamamen azat edilmektir. Bilinçle, zekayla alakası yoktur, zevkle, jouissance ile ilgilidir.”[9] “Yasanın kuralı jouissance sayılabilecek her şeyi parçalamak, dağıtmak ve geri dağıtmaktır. Jouissance nedir? Bu haliyle bir hiç değilse bile en fazla olumsuz bir haldir.<br>
-          <br>
-          Jouissance hiçbir amaca hizmet etmeyendir.”[10]<br>
-          
-          <br>
-          [1]: Pierre Schaeffer, 1987, [2]: Luigi Russolo, 1913, [3]: Hugo Ball, 1916, [4]: Jacques Attali, 1977, [5]: Otomo Yoshihide, 2003, [6]: Guy Debord, 1962, [7]: Paul Hegarty, 2007, [8]: Masami Akita, 1997, [9]: Csaba Toth, 2008, [10]: Jacques Lacan, 1972
-          </p>
-        
-       
+     
+   
+    </div>
+     <footer class="footer">
+      <div class="container col-md-8 px-3 mx-auto text-center">
+        <small class="text-muted">designed & deployed by ap0teke. bootstrap, p5.js, github. 2022.</small>
       </div>
-    </div>
-  </div>
-
-  <div id="translation" class="w3-container w3-border tab" style="display:none; height: 85vh;">
-    <h3>Full with Noise: Theory and Japanese Noise Music, Paul Hegarty</h3>
-    <h4>translated for <a href="https://artisdead.in/zine" target="_blank">AIDzine</a></h4>
-    <div class="w3-container">
-      <embed class="pdf  w3-padding-small" type="application/pdf" src= "fwn.pdf">
-      <h4><a class="pdf-link" href="https://www.academia.edu/43506845/Gürültüyle_Dolu_Teori_ve_Japon_Gürültü_Müziği_Paul_Hegarty_çeviri_" target="_blank">Link</a></h4>
-      </div>
+    </footer>
     
- 
-    
-
-
-</div>
-  </div>
-</div>
-
-
-
-<div class="w3-display-container" style="background-color: #FBFBF2;">
-<div id="contact" class="w3-display-container " style="height: 100vh;">
-  <div id="contact-card" class="w3-card-4 w3-display-container w3-display-middle w3-padding-large" style="width:33vw">
-    <img class="w3-center" src="./img/contact.jpg" alt="Alps" style="width:30vw; height: auto;">
-    <div class="w3-container w3-center">
-      <p>Alparslan Teke</p>
-      <a href="mailto:alparslanteke@yahoo.com?subject=ap0teke.github.io">
-        <p>alparslanteke@yahoo.com</p>
-      </a>
-    
-      <a href="https://www.linkedin.com/in/alparslan-teke-8a96051ab/" target="_blank"><img class="logo"  src="./img/in.png"><img></a>
-      <a href="https://soundcloud.com/apo-teke"  target="_blank"><img class="logo"  src="./img/sc.jpg"><img></a>
-      <a href="https://github.com/ap0teke" target="_blank"><img class="logo"  src="./img/gh.png"><img></a>
-
-    </div>
-  </div>
-</div>
-    </div>
-
-<div class="footer">designed and written by alparslan teke. 2021.</div>
-
-<script src="./basic.js"></script>
-<script src="./three.r119.min.js"></script>
-<script src="./vanta.cells.min.js"></script>
-<script>
-VANTA.CELLS({
-  el: "#background-cells",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  color1: 0x278e04,
-  color2: 0xf235af,
-  size: 3.80,
-  speed: 0.275
-})
-</script>
-
-</body>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script type="module" src="assets/js/starter.js"></script>
+  </body>
 </html>

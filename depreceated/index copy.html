@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>ap0teke</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<!--text animation by github/faebeee/write-and-delete -->
+<script src="./basic.js"></script>
+<script src="./dist/webcomponent.js" defer></script>
+<body class="w3-content" style="max-width:100%">
+
+
+
+<div id="navbar" class="w3-bar w3-top w3-white w3-display-container" >
+    <div class="w3-bar-item w3-row w3-col w3-monospace w3-wide" id="page-title" style="width:220px;">
+        <a href="https://ap0teke.github.io" style="text-decoration: none !important;"><div class="w3-col" id="name" style="width: 150px;">
+            <h4><write-and-delete id="namein" class="w3-right"  timeout="300" loop="true" speed="100" errorQuota="0.3" errorCharacterMap="a,e,o,ö,æ,z,y,q,m,d,0,1,2,3,4,5,6,7,8,9" cursor="_">alparslan, apo, ap0</write-and-delete></h4></div>
+            <div class="w3-rest"><h4>
+              teke
+          </h4></a>
+        
+        </div>
+    </div>
+    <div class="w3-padding-16 w3-hide-small">
+        <a href="#contact" class="w3-bar-item w3-button w3-right w3-round-xxlarge">contact</a>
+        <a href="#selected-works" class="w3-bar-item w3-button w3-right w3-round-xxlarge ">selected works</a>
+        <a href="#" class="w3-bar-item w3-button w3-right w3-round-xxlarge">main</a>
+    </div>  
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-padding-16 w3-hide-large w3-hide-medium" onclick="collapseNavbar()">&#9776;</a>
+  
+  </div>
+  
+  <div id="navbarham" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-padding-top-64 w3-display-container">
+    <a href="#" class="w3-bar-item w3-button w3-right w3-round-xxlarge ">main</a>
+    <a href="#selected-works" class="w3-bar-item w3-button w3-right w3-round-xxlarge ">selected works</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-right w3-round-xxlarge">contact</a>
+    
+    
+  </div>
+
+
+
+<!-- Start Content -->
+
+<div id="main">
+    <img class="w3-display-container w3-green" id="main-img" src="img/welcome.jpg" alt="ap0teke" style="height: 100vh !important; position: relative;">
+    
+    <div id="about-box" class = "w3-display-right" > 
+        <button id="show" class=" w3-button w3-text-white w3-round-xxlarge w3-pink" onclick="w3.show('#about-me'), w3.hide('#show')">about me</button>
+        <div id="about-me" class="w3-card-4 w3-cell w3-cell-middle w3-display-bottomright w3-padding-64 w3-animate-right w3-animate-opacity w3-border w3-round-xxlarge" style="display: none;"> 
+            <p class="w3-padding-large w3-opacity-off w3-white w3-round-large"  style="width: 50vw;">alparslan/apo/ap0-teke is a double renegade who converted from engineering to sociology, and from there to arts and design. I make noise. I design and code. I do translations. Currently, I immersed myself in web design and development.<br><br>I performed in many cities in Turkey, as well as in Germany and Netherlands, mostly as an organic part of <a href="https://artisdead.in" target="_blank">Art is Dead</a> initiative, where my participation included logistics volunteering and co-organizing as well. I collaborate with artists from different backgrounds.<br><br> I am always open to collaborations, partnerships, or projects. Just hit me up via one of the <a href="#contact">contact channels</a> below. <br><br> You can find my resume <a href="./CV.pdf" target="_blank">here</a>.
+            </p>
+            <button id="hide" class="w3-button w3-text-white w3-round-xxlarge w3-pink w3-right w3-opacity-off" onclick="w3.hide('#about-me'), w3.show('#show')">
+                hide           
+        </button></div>
+        
+    </div>
+</div>
+<!--<div id="home" class="w3-content w3-padding-top-48">
+<img class="w3-animate-top" src="img/welcome.jpg" alt="ap0teke" style="width:100%">
+</div>-->
+<div id="selected" class="w3-display-container" style="background-color: #FBFBF2;">
+  <div id="selected-works" class="w3-baby w3-container w3-padding-top-24" style="height: 100vh;">
+  <div class="w3-bar w3-row w3-platin">
+    <button class="w3-bar-item w3-button tablink w3-third tabs-button" onclick="worksTab(event,'noise')"><h4>noise/music</h4></button>
+    <button class="w3-bar-item w3-button tablink tabs-button w3-third" onclick="worksTab(event,'cutup')"><h4 >cut-up</h4></button>
+    <button class="w3-bar-item w3-button tablink tabs-button w3-third" onclick="worksTab(event,'translation')" ><h4>translation</h4></button>
+  </div>
+  
+  <div id="noise" class="w3-container w3-border tab">
+    
+    <div class="w3-padding-64 w3-row-padding">
+      <div class="w3-col w3-platin w3-center w3-padding-32 m6 l4">
+        <h5 class="w3-padding-16">apoteke - solo noise project</h5>
+        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/674461586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/apo-teke" title="apoteke" target="_blank" style="color: #cccccc; text-decoration: none;">apoteke</a> · <a href="https://soundcloud.com/apo-teke/extra-virgin" title="Extra Virgin" target="_blank" style="color: #cccccc; text-decoration: none;">Extra Virgin</a></div>
+        <p>no-input mixer, puredata/automatonism.</p>
+      </div>
+      <div class="w3-col w3-baby w3-center w3-padding-32 m6 l4">
+        <h5 class="w3-padding-16">in collaboration with bes</h5>
+        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/779814928&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/apo-teke" title="apoteke" target="_blank" style="color: #cccccc; text-decoration: none;">apoteke</a> · <a href="https://soundcloud.com/apo-teke/ruzgarda-karahindiba-apotekebes" title="Rüzgârda Karahindiba - apoteke&amp;bes" target="_blank" style="color: #cccccc; text-decoration: none;">Rüzgârda Karahindiba - apoteke&amp;bes</a></div>
+        <p>no-input mixer, electronics, pc.</p>
+      </div>
+      <div class="w3-col w3-timber w3-center w3-padding-32 m6 l4">
+        <h5 class="w3-padding-16">as part of fireball quartet</h5>
+        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/643349031&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/apo-teke" title="apoteke" target="_blank" style="color: #cccccc; text-decoration: none;">apoteke</a> · <a href="https://soundcloud.com/apo-teke/sahap-dortlusu" title="şahap dörtlüsü" target="_blank" style="color: #cccccc; text-decoration: none;">şahap dörtlüsü</a></div>
+        <p>no-input-mixer, electronics.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="cutup" class="w3-container w3-border tab" style="display:none">
+    <div class="w3-padding-64 w3-row-padding">
+      <div id="cutup1" class="w3-col w3-platin w3-center w3-padding-32 m6 l4">
+      <h3>zaman</h3>
+      <p  class="w3-container w3-padding-large">Ve bütün lanetlenmiş ruhlar gibi, içinde akıl yürütme yetisine sahip ahlak kuralları, Hoboken'e gittiğimizde canlı bir şekilde dile getirilen bir hayalet filmiydi.<br>
+        Einst war der Geist Gott, dann wurde er zum Menschen und jetzt wird er gar noch Pöbel.<br>
+        Emek aracı işçiyi yere serer. Tersine bir prens daima "şiir"den daha değerlidir, varolan yapıların yeni bir kullanımıdırlar. Onlar bu dünya için, bunlar ahiret ve kıyamet günü için! Kapitalistle ücretli işçi arasındaki mücadele, göbek çizgisi boyunca akıyor. Kilise diyorlar tatlı kokulu mağaralarına. Ne var ki bizim burada üzerinde durduğumuz, adım adım işaretlenmiş tek ve aynı tarihtir. Takip altında limana sığınırken suların alçalması yüzünden gecikebilip, içer ve amfetamin alırdı. Ardından senden faydalanır. Keza, devlet otoritesi altında parça-iş olarak birbirinden bağımsızlaşan gözleri kızın vücudunda gezindi. Ancak aşka mıhlanacak kadar güçlü olan kişi aşık olabilirdi.<br>
+        Deyip keselim:<br>
+        İyi niyetli ikiyüzlülük - onlara görece büyük bir sanayi içinde Bilgi Ağacı'nın meyvelerini bağımsız devreler arasında kümelenmiş bir evrimin dolambaçlı sevgi ve duygudaşlık elbisesi biçiminde düşünselleştirilmesinin göstergesidir.
+        </p>
+      </div>
+      <div id="cutup2" class="w3-col w3-baby w3-center w3-padding-32 m6 l4">
+        <h3>çürüme</h3>
+        <p class="w3-container w3-padding-large">Herkes, düpedüz sarılan bitkilerle sülükler, daha sonra "Queer ve "Yage"; gerçek daima aynı yere döner. Suç, devletsiz bir toplumun ve egoistler birliğine ulaşmanın araçlarından biridir.<br>
+          Arap, beni görür görmez biraz doğruldu, o yaz daha önceki aylarda kızıyla çok vakit geçirmiştim; Güney Amerika'da çabucak doğallaşmasına bakarak, onun birkaç yılda bütün kıtayı kaplayabileceğine kesinlikle inanabilirdik. Düşünceye Özerk sonluklar sunan bu imgelerin sayımının ben olduğumu anlamak için, gayret sarf etmem gerekti.<br>
+          <br>
+          Gece, iptal edilmiş bir uyku, her gece.<br>
+          <br>
+          
+          "Senin adına buna pek üzüldüm..." dedi.<br>
+          Yıllar geçti.<br>
+          Üzerime kapandı oda, umduğum varlığıydı.<br>
+          Ceza artık bir suçun karşılığı değil.<br>
+          </p>
+        
+      </div>
+      <div id="cutup3" class="w3-col w3-timber w3-center w3-padding-32 m6 l4">
+        <h3>gürültü</h3>
+        <p class="w3-container w3-padding-large">
+          “Ses, doğanın kelime dağarcığıdır.”[1]<br>
+
+          “Antik yaşam tamamen sessizdi.”[2]<br>
+          
+          “Kelime, baylar, birincil derecede kamu sorunudur.”[3] “’Gösterilen’e gönderme yapan dilin     kelimelerinden farklı olarak, müzikte asla lisan tarzı bir şifre istikrarlı olarak esas alınmaz. Burada söz konusu olan [Levi-Strauss’un düşündüğünün aksine] ‘kelimeler yerine sesler halinde kodlanmış bir masal’ değil, daha ziyade ‘anlamı çıkarılmış bir lisan’dır.”[4] “Belirli bir sesi anlam çerçevesinde değerlendirince, sesin artık ses olarak duyulmadığı, vurgunun kendi başına sesten, belirlenmiş sabit bir anlama kaydığı söylenebilir. ABSENTMINDED dinleme ise bunun tersidir: ses aracılığıyla anlamlar keşfetmeyi ya da sesin kuruluşunda önceden belirlenmiş bir şeyler aramayı durdurmak için beynimizdeki ses sınıflandırma-tanımlama yazılımının engellenmesi yahut kontrol edilmesi.”[5] <br>
+          <br>
+          “Kapitalizm gerçek olmayan, aldatmaca bir gerçeklik olan ‘imgeler’in (yani temsiller, akli konseptler) üreticisidir ve bunlar yalnızca sahte gerçekliğin yararına çalışırlar –gösteri. Gösteri yaşamın, yaşamın sosyal ilişkilerinden (sosyal sınıf sistemini de muhafaza eder) ayrılmasının, bizim ihtisas dediğimiz bireysel hücrelere ayrılmış hayali bir dünyanın yaratımının sorumlusudur: felsefe, din, sanat, bilim vs.”[6] “Egemen ekonomik sistem, gösterinin yaratıcı özgürlüğümüze yönelik tehditlerine direnmek için birtakım yollar geliştirilmelidir. Sanat elle tutulamaz, fildişi kulesinden inmeli, kişinin bireyselliğinin yabancı bir sosyal çevre tarafından değil, sosyal ilişkilerin kişinin bireyselliğine dayalı olarak keşfedildiği komünal bir deneyim olmalıdır.<br>
+          <br>
+          Bu, doğaçlama bir ortamda başarılabilecek bir şeydir. Serbest doğaçlamada vuku bulan şey insanlar arasında direkt yaratıcı (bu yüzden mümkün olduğunca daha özgür) bir ilişkidir. “Oyuncu(lar)” ve “kitle” arasındaki ayrım bulanıklaştırılmalıdır zira ikisi de aynı çevreyi paylaşırlarken ilişkileri simbiyotik bir hal alır. Bu, bunun iyi bir deneyim olacağı anlamına gelmez, yalnızca spesifik bir zaman ve mekanda, bir çevrede, bir durumda, bir şeyler olur.”[7]<br>
+          <br>
+          “Serbest doğaçlama direkt olarak gürültü ile ilişkilidir, zira kişinin tarzları sınırlayan önceden belirlenmiş resmi geleneklerden özgürleşmesi anlamına gelir, ve serbest doğaçlama kişinin spesifik bir uzay zamanda çevresine verdiği çıktıya olan ilişkisi dışında bilinçli olarak tarza teslimiyettir. <br>
+          <br>
+          Pornografi seksin bilinçsizlik halidir. Gürültü müziğin bilinçsizliğidir.”[8] “Gürültü müzik anlam yoksunluğu, yalnızca vahşi bir ifadedir. Bu yüzden gürültü müzik gösteriyi gerçek hayata indirmesi anlamında gerçekliğin bir yansımasını temsil eder. Yaşamın gerçek olmasını engelleyen gürültüyü, sahte olan alternatif gerçekliği yansıtır. Direkt olarak imgeler piyesine müdahale eder ve kendini vahşet, düzensizlik, saçmalık, özgürlük olarak sunar. Sosyal bir anlaşmadan özgürleştiğindeki insanın halidir; benlikten tamamen azat edilmektir. Bilinçle, zekayla alakası yoktur, zevkle, jouissance ile ilgilidir.”[9] “Yasanın kuralı jouissance sayılabilecek her şeyi parçalamak, dağıtmak ve geri dağıtmaktır. Jouissance nedir? Bu haliyle bir hiç değilse bile en fazla olumsuz bir haldir.<br>
+          <br>
+          Jouissance hiçbir amaca hizmet etmeyendir.”[10]<br>
+          
+          <br>
+          [1]: Pierre Schaeffer, 1987, [2]: Luigi Russolo, 1913, [3]: Hugo Ball, 1916, [4]: Jacques Attali, 1977, [5]: Otomo Yoshihide, 2003, [6]: Guy Debord, 1962, [7]: Paul Hegarty, 2007, [8]: Masami Akita, 1997, [9]: Csaba Toth, 2008, [10]: Jacques Lacan, 1972
+          </p>
+        
+       
+      </div>
+    </div>
+  </div>
+
+  <div id="translation" class="w3-container w3-border tab" style="display:none; height: 85vh;">
+    <h3>Full with Noise: Theory and Japanese Noise Music, Paul Hegarty</h3>
+    <h4>translated for <a href="https://artisdead.in/zine" target="_blank">AIDzine</a></h4>
+    <div class="w3-container">
+      <embed class="pdf  w3-padding-small" type="application/pdf" src= "fwn.pdf">
+      <h4><a class="pdf-link" href="https://www.academia.edu/43506845/Gürültüyle_Dolu_Teori_ve_Japon_Gürültü_Müziği_Paul_Hegarty_çeviri_" target="_blank">Link</a></h4>
+      </div>
+    
+ 
+    
+
+
+</div>
+  </div>
+</div>
+
+
+
+<div class="w3-display-container" style="background-color: #FBFBF2;">
+<div id="contact" class="w3-display-container " style="height: 100vh;">
+  <div id="contact-card" class="w3-card-4 w3-display-container w3-display-middle w3-padding-large" style="width:33vw">
+    <img class="w3-center" src="./img/contact.jpg" alt="Alps" style="width:30vw; height: auto;">
+    <div class="w3-container w3-center">
+      <p>Alparslan Teke</p>
+      <a href="mailto:alparslanteke@yahoo.com?subject=ap0teke.github.io">
+        <p>alparslanteke@yahoo.com</p>
+      </a>
+    
+      <a href="https://www.linkedin.com/in/alparslan-teke-8a96051ab/" target="_blank"><img class="logo"  src="./img/in.png"><img></a>
+      <a href="https://soundcloud.com/apo-teke"  target="_blank"><img class="logo"  src="./img/sc.jpg"><img></a>
+      <a href="https://github.com/ap0teke" target="_blank"><img class="logo"  src="./img/gh.png"><img></a>
+
+    </div>
+  </div>
+</div>
+    </div>
+
+<div class="footer">designed and written by alparslan teke. 2021.</div>
+
+<script src="./basic.js"></script>
+
+</body>
+</html>
