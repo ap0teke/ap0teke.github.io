@@ -1,0 +1,49 @@
+:root {
+    --default-opacity: 0.95;
+}
+
+.content {
+    opacity: var(--default-opacity);
+    overflow-y: scroll;
+    scrollbar-color: yellow green;
+}
+
+* {
+    transition-duration: 500ms;
+}
+
+body {
+    font-family: 'Courier Prime', monospace !important;
+    height: 100vh;
+    width: 100vw;
+    overflow-y:hidden;
+}
+
+#body-toggle {
+    transition-duration: 0s !important;
+}
+
+.content::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+ 
+  .content::-webkit-scrollbar-thumb {
+    background-color: rgb(204, 204, 204);
+   
+  }
+
+  .tall-text {
+      line-height: 30px !important;
+  }
+
+.thumbnails {
+    padding-bottom:5px;
+    max-width: 95%;
+    height: auto;
+}
+
+
+.nounderline {
+    text-decoration: none !important;
+  }
