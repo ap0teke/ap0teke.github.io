@@ -23,14 +23,6 @@ var delayInMilliseconds = 10;
 let randomFollow;
 let numOfCircles;
 
-//let darkModeToggle;
-let lightModeToggle;
-
-let bodyToggle;
-let bodyVisible = true;
-let bodyVisibleButtonText = "x";
-//let darkModeToggleText = "o";
-let lightModeToggleText = "o";
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
@@ -46,25 +38,7 @@ function setup() {
   //background(0);
   noStroke();
   frameRate(17);
-  // //CREATE BUTTON FOR DARK MODE
-  // darkModeToggle = createButton(darkModeToggleText);
-  // darkModeToggle.size(30, 30);
-  // darkModeToggle.position(width-30, height-130);
-  // darkModeToggle.mousePressed(DarkMode);
 
-    //CREATE BUTTON FOR LIGHT MODE
-    lightModeToggle = createButton(lightModeToggleText);
-    lightModeToggle.size(30, 30);
-    lightModeToggle.position(width-30, height-130);
-    lightModeToggle.mousePressed(LightMode);
-
-  //CREATE BUTTON FOR CIRCLEGAZING
-  //bodyVisibleButtonText = "here for the circles"
-  bodyToggle = createButton(bodyVisibleButtonText);
-  bodyToggle.size(30, 30);
-  bodyToggle.id("body-toggle");
-  bodyToggle.position(width-30, height-100);
-  bodyToggle.mousePressed(HereForCircles);
 
 
   document.body.style.backgroundColor = "#1c1c1c";
@@ -178,42 +152,5 @@ function DarkMode() {
   }
 } */
 
-function LightMode() {
-  if (light == false) {
-    light = true;
-    //CHANGE BACKGROUND COLOR
-    document.body.style.backgroundColor = "#1c1c1c";
-    //CHANGE BUTTON COLORS
-    bodyToggle.style("background-color", "#1c1c1c");
-    bodyToggle.style("color", "#dedede");
-    bodyToggle.html(bodyVisibleButtonText);
-    lightModeToggle.style("background-color", "#1c1c1c");
-    lightModeToggle.style("color", "#dedede");
- 
-  } else {
-    light = false;
-    //CHANGE BACKGROUND COLOR
-    document.body.style.backgroundColor = "#dedede";
-    //CHANGE BUTTON COLORS
-    bodyToggle.style("background-color", "#dedede");
-    bodyToggle.style("color", "#1c1c1c");
-    bodyToggle.html(bodyVisibleButtonText);
-    lightModeToggle.style("background-color", "#dedede");
-    lightModeToggle.style("color", "#1c1c1c");
 
-
-  }
-}
-
-
-function HereForCircles() {
-  if (bodyVisible == true) {
-    bodyVisible = false;
-    document.documentElement.style.setProperty('--default-opacity', '0.0');
-    ;
-  } else {
-    document.documentElement.style.setProperty('--default-opacity', '0.95');
-    bodyVisible = true;
-  }
-  } 
 
